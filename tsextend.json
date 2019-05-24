@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "sourceMap": false,
+    "skipLibCheck": false,
+    "types": ["react", "jest"]
+  }
+}

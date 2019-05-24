@@ -1,12 +1,33 @@
+import 'reflect-metadata';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as mobx from 'mobx';
+import { syncHistoryWithStore } from 'mobx-react-router';
+import { Router } from 'react-router';
+import { RouterStore } from 'mobx-react-router';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import browserHistory from './app/history';
+import Application from './app/App';
+import * as serviceWorker from './serviceWorker';
+import './assets/fonts.css';
+import { container } from './dal/IoC';
+
+const routingStore = container.get(RouterStore);
+
+window['__localeData__'] = {};
+
+mobx.configure({ enforceActions: 'observed' });
+
+const history = syncHistoryWithStore(browserHistory, routingStore);
+
+ReactDOM.render(
+  <Router history={history}>
+    <Application />
+  </Router>,
+  document.getElementById('root') as HTMLElement
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();

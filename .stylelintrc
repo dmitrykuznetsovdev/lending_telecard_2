@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@holism/dotfiles/stylelint.config.js"
+  ]
+}
