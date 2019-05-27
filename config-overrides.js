@@ -1,6 +1,4 @@
-const path = require('path');
-
-module.exports = function override(config) {
+module.exports = function override(config, env) {
   config.resolve = {
     ...config.resolve
   };

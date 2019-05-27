@@ -5,7 +5,12 @@ import { COLORS } from '@holism/core';
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = !!md.mobile();
 
-export const GlobalStyle = createGlobalStyle`                                                              
+export const GlobalStyle = createGlobalStyle`
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    }
+                                                              
     html, body {
       height: 100%;
       box-sizing: border-box;
@@ -24,7 +29,9 @@ export const GlobalStyle = createGlobalStyle`
       height: 100%;           
       color: ${COLORS.black};      
       background-color: #FFFFFF;
-      font-family: Regular, sans-serif !important;           
+      font-family: Regular, sans-serif !important;        
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;   
     }
   
     #root {

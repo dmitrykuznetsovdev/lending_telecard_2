@@ -1,175 +1,165 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 
-import { withIsMobile } from '../../dal/commonDecorators';
+import {withIsMobile, withIntl} from '../../dal/commonDecorators';
+import {Header} from '../../components/Header/header';
 import {DownloadAppButton} from '../../components/DownloadAppButton';
-
-import {Header} from './header';
-import screen1 from './img/screen1.jpg';
-import screen2 from './img/screen2.jpg';
-import screen3 from './img/screen3.jpg';
-import screen5 from './img/screen5.jpg';
-import screen6 from './img/screen6.jpg';
-import screen7 from './img/screen7.jpg';
 import {
-  Root,
-  Step,
-  StepFirst,
-  StepImage,
+  Image,
   StepTitle,
-  StepText,
+  Description,
   Content,
-  FontBI,
-  List,
   Wrapper,
   ContentTitle,
-} from './style';
+  GridStep,
+  GridCol,
+  GridColDescription
+} from '../../components/StepInstall/style';
+
+import screen1 from './img/screen1.png';
+import screen2 from './img/screen2.png';
+import screen3 from './img/screen3.png';
+import screen4 from './img/screen4-1.png';
+import screen4_1 from './img/screen4-2.png';
+import screen5 from './img/screen5.png';
+import screen6 from './img/screen6.png';
+import { Root } from './style';
 
 interface IProps {
   isMobile?: boolean;
+  t: (s: string) => string;
 }
 
 function StepOne({isMobile}: Partial<IProps>) {
   return (
-    <StepFirst>
-      <StepImage src={screen1}/>
-      <StepTitle>
-        1. Загрузите телекард 2.0
-      </StepTitle>
-      <StepText>
-        Для этого нажмите на кнопку ниже и переходите к&nbsp;следующему шагу.
-        <br />
-        <DownloadAppButton dimension="medium" isFullWidth={isMobile}>
-          Скачать приложение
-        </DownloadAppButton>
-      </StepText>
-    </StepFirst>
+    <GridStep>
+      <GridColDescription>
+        <StepTitle>
+          1. <DownloadAppButton isFullWidth={isMobile} dimension="small" url="#">
+            Скачать приложение
+          </DownloadAppButton>
+        </StepTitle>
+      </GridColDescription>
+      <GridCol>
+        <Image src={screen1}/>
+      </GridCol>
+    </GridStep>
   )
 }
 
 function StepSecond() {
   return (
-    <Step>
-      <StepImage src={screen2}/>
-      <StepTitle>
-        2. Откройте страницу в iTunes
-      </StepTitle>
-      <StepText>
-        Телефон предложит вам открыть страницу в приложении iTunes.
-        Соглашайтесь&nbsp;&mdash;&nbsp;нажмите <FontBI>«Открыть»</FontBI>.
-      </StepText>
-    </Step>
+    <GridStep>
+      <GridColDescription>
+        <StepTitle>
+          2. Подтвердите установку
+        </StepTitle>
+        <Description>
+          Появится предупреждающий
+          поп-ап, выберите «Установить».
+        </Description>
+      </GridColDescription>
+      <GridCol>
+        <Image src={screen2}/>
+      </GridCol>
+    </GridStep>
   )
 }
+
 function StepThird() {
   return (
-    <Step>
-      <StepImage src={screen3}/>
-      <StepTitle>
-        3. Подтвердите установку
-      </StepTitle>
-      <StepText>
-        Появится диалоговое окно с предложением установить приложение <FontBI>«Telecard»</FontBI> от
-        dbo.gazprombank.ru. Нажмите&nbsp;<FontBI>«Установить»</FontBI>.
-      </StepText>
-    </Step>
+    <GridStep>
+      <GridColDescription>
+        <StepTitle>
+          3. Установка началась
+        </StepTitle>
+        <Description>
+          На главном
+          экране телефона вы увидите,
+          когда она закончится.
+        </Description>
+      </GridColDescription>
+      <GridCol>
+        <Image src={screen3}/>
+      </GridCol>
+    </GridStep>
   )
 }
 
 function StepFour() {
   return (
-    <Step>
-      <StepImage src={screen5}/>
-      <StepTitle>
-        4. Разрешите пользоваться приложением от BANK GPB, AO
-      </StepTitle>
-      <StepText>
-        Из-за того, что <FontBI>«Телекард 2.0»</FontBI> установлен не из App Store понадобится
-        подтвердить, что вы доверяете этому приложению и подтверждаете его надежность. Для этого:
-
-        <List>
-          <li>Зайдите в настройки вашего телефона.</li>
-          <li>Перейдите в раздел <FontBI>«Основные»</FontBI>, а в нем&nbsp;&mdash;&nbsp;в
-            раздел <FontBI>«Профиль»</FontBI>.
-          </li>
-          <li>Под заголовком <FontBI>«Корпоративная&nbsp;программа»</FontBI> вы увидите
-            профиль <FontBI>«BANK&nbsp;GPB,&nbsp;AO»</FontBI>. Нажмите на него.
-          </li>
-          <li>Подтвердите, что доверяете нам и хотите пользоваться приложением&nbsp;&mdash;&nbsp;нажмите&nbsp;<br />
-            <FontBI>«Доверять&nbsp;BANK&nbsp;GPB,&nbsp;AO»</FontBI>.
-          </li>
-        </List>
-      </StepText>
-    </Step>
+    <GridStep>
+      <GridColDescription>
+        <StepTitle>
+          4. Перейдите в настройки телефона
+        </StepTitle>
+        <Description>
+          «Основные» →
+          «Профили и управл.
+          устройством» → Bank GPB.AO
+          <br /> <br />
+        </Description>
+        <Image src={screen4}/>
+        <Image src={screen4_1}/>
+      </GridColDescription>
+    </GridStep>
   )
 }
 
 function StepFive() {
   return (
-    <Step>
-      <StepImage src={screen6}/>
-      <StepTitle>
-        5. Подтвердите действие
-      </StepTitle>
-      <StepText>
-        Появится еще одно диалоговое окно в котором нужно подтвердить разрешение пользоваться нашими
-        приложениями.
-        Подтверждайте&nbsp;&mdash;&nbsp;нажмите <FontBI>«Доверять»</FontBI>.
-      </StepText>
-    </Step>
+    <GridStep>
+      <GridColDescription>
+        <StepTitle>
+          5. Нажмите «Доверять BANK GPB,AO»…
+        </StepTitle>
+      </GridColDescription>
+      <GridCol>
+        <Image src={screen5}/>
+      </GridCol>
+    </GridStep>
   )
 }
 
 function StepSix() {
   return (
-    <Step>
-      <StepImage src={screen7}/>
-      <StepTitle>
-        6. Зарегистрируйтесь
-      </StepTitle>
-      <StepText>
-        Вернитесь на главный экран, откройте приложение и введите номер телефона, привязанный к вашей карте
-        Газпромбанка.
-        Затем введите код подтверждения из СМС.
-        <br/><br/>
-        После подтверждения номера придумайте надежный пароль. Рекомендуем создать пароль минимум из шести
-        символов, который содержит: цифры, заглавные и строчные буквы
-        английского алфавита.
-        <br/><br/>
-        Готово!
-      </StepText>
-    </Step>
+    <GridStep>
+      <GridColDescription>
+        <StepTitle>
+          6. … и еще раз «Доверять».
+        </StepTitle>
+      </GridColDescription>
+      <GridCol>
+        <Image src={screen6}/>
+      </GridCol>
+    </GridStep>
   )
 }
 
 @observer
 class IosPage extends Component<IProps> {
   render() {
-    const { isMobile } = this.props;
+    const {isMobile} = this.props;
 
     return (
       <Root>
-        <Header />
-          <Wrapper>
-            <ContentTitle>
-              Как установить приложение
-            </ContentTitle>
-            <Content>
-              <StepOne isMobile={isMobile} />
-              <StepSecond />
-              <StepThird />
-              <StepFour />
-              <StepFive />
-              <StepSix />
-            </Content>
-            <br />
-            <DownloadAppButton isFullWidth={isMobile}>
-              Скачать приложение
-            </DownloadAppButton>
-          </Wrapper>
+        <Header title="Телекард 2.0 для iOS" system="ios" />
+        <Wrapper>
+          <ContentTitle>
+            Как установить приложение
+          </ContentTitle>
+          <Content>
+            <StepOne isMobile={isMobile}/>
+            <StepSecond/>
+            <StepThird/>
+            <StepFour/>
+            <StepFive/>
+            <StepSix/>
+          </Content>
+        </Wrapper>
       </Root>
     );
   }
 }
 
-export default withIsMobile(IosPage);
+export default withIsMobile(withIntl(IosPage));

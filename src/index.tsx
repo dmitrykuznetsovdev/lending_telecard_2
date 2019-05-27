@@ -9,15 +9,15 @@ import { RouterStore } from 'mobx-react-router';
 import browserHistory from './app/history';
 import Application from './app/App';
 import * as serviceWorker from './serviceWorker';
-import './assets/fonts.css';
 import { container } from './dal/IoC';
 
-const routingStore = container.get(RouterStore);
+
 
 window['__localeData__'] = {};
 
 mobx.configure({ enforceActions: 'observed' });
 
+const routingStore = container.get(RouterStore);
 const history = syncHistoryWithStore(browserHistory, routingStore);
 
 ReactDOM.render(

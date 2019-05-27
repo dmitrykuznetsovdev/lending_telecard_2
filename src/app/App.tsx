@@ -5,12 +5,11 @@ import { observer } from 'mobx-react';
 import { RouterStore } from 'mobx-react-router';
 
 import UIStore from '../dal/UIStore';
-import { withIsMobile } from '../dal/commonDecorators';
+import { withIsMobile, withIntl } from '../dal/commonDecorators';
 import { GlobalStyle } from '../assets/normalize';
-import '../assets/fonts.css';
 import { lazyInject } from '../dal/IoC';
 
-import { RootPageLazy, IosPageLazy, AndroidPageLazy } from './Routes';
+import { IosPageLazy, AndroidPageLazy } from './Routes';
 import { AppComponent, Content } from './style';
 
 interface IProps {
@@ -53,7 +52,7 @@ class Application extends Component<IProps, IState> {
             <Switch>
               <Route component={AndroidPageLazy} path="/android/" />
               <Route component={IosPageLazy} path="/ios/" />
-              <Route component={RootPageLazy} path="/" exact={true} />
+              <Route component={IosPageLazy} path="/" exact={true} />
             </Switch>
           </Content>
         </AppComponent>
@@ -62,4 +61,4 @@ class Application extends Component<IProps, IState> {
   }
 }
 
-export default withRouter<any>(withIsMobile(Application));
+export default withRouter<any>(withIsMobile(withIntl(Application)));
