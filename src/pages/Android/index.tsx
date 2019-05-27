@@ -4,6 +4,7 @@ import {observer} from 'mobx-react';
 import {withIsMobile, withIntl} from '../../dal/commonDecorators';
 import {Header} from '../../components/Header/header';
 import {DownloadAppButton} from "../../components/DownloadAppButton";
+import appSettings from "../../conf/app-settings";
 import {
   Image,
   StepTitle,
@@ -32,7 +33,7 @@ function StepOne({isMobile}: Partial<IProps>) {
     <GridStep>
       <GridColDescription>
         <StepTitle>
-          1. Нажмите <DownloadAppButton isFullWidth={isMobile} dimension="small" url="#">
+          1. Нажмите <DownloadAppButton isFullWidth={isMobile} dimension="small" url={appSettings.LINK_APP_ANDROID_URL}>
           Скачать приложение
         </DownloadAppButton>
         </StepTitle>

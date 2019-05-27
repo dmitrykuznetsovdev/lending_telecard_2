@@ -1,6 +1,6 @@
 const appSettings = {
-  SERVICE_BASE_URL: '',
-  MOCK_URL: '',
+  "LINK_APP_IOS_URL": "",
+  "LINK_APP_ANDROID_URL": ""
 };
 
 export default appSettings;

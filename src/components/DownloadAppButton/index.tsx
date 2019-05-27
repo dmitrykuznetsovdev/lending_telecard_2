@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@holism/core";
+import {Button} from "@holism/core";
 
 import {
   Icon,
@@ -13,19 +13,24 @@ interface IProps {
 }
 
 export function DownloadAppButton({children, isFullWidth, dimension = 'medium', url = '#'}: IProps) {
+  function onClick() {
+    if(url && window) {
+      window.location.href = url;
+    }
+  }
+
   return (
-    <a href={url}>
-      <Button
-        isWithIcon={true}
-        dimension={dimension}
-        color="primary"
-        isFullWidth={isFullWidth}
-      >
-        <Icon />
-        <span>
+    <Button
+      isWithIcon={true}
+      dimension={dimension}
+      color="primary"
+      isFullWidth={isFullWidth}
+      onClick={onClick}
+    >
+      <Icon/>
+      <span>
           {children}
         </span>
-      </Button>
-    </a>
+    </Button>
   )
 }

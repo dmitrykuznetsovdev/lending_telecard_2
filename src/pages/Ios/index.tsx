@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
+import appSettings from '../../conf/app-settings';
 
 import {withIsMobile, withIntl} from '../../dal/commonDecorators';
 import {Header} from '../../components/Header/header';
@@ -35,7 +36,7 @@ function StepOne({isMobile}: Partial<IProps>) {
     <GridStep>
       <GridColDescription>
         <StepTitle>
-          1. <DownloadAppButton isFullWidth={isMobile} dimension="small" url="#">
+          1. <DownloadAppButton isFullWidth={isMobile} dimension="small" url={appSettings.LINK_APP_IOS_URL}>
             Скачать приложение
           </DownloadAppButton>
         </StepTitle>
