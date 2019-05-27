@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c660cdd-b824-4404-aa1b-3787f4541d79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/app-settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bootstrap/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DownloadAppButton/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DownloadAppButton/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icons/tsx/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icons/tsx/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conf/app-settings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/app-settings.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conf/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Android/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Android/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Ios/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ios/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="4c660cdd-b824-4404-aa1b-3787f4541d79" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,12 +354,12 @@
       <workItem from="1558520237285" duration="2077000" />
       <workItem from="1558522708583" duration="6190000" />
       <workItem from="1558536417578" duration="5681000" />
-      <workItem from="1558708907729" duration="10970000" />
+      <workItem from="1558708907729" duration="11087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27662000" />
+    <option name="totallyTimeSpent" value="27779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
