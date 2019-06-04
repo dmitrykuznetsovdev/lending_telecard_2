@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       height: 100%;           
-      color: ${COLORS.black};      
+      color: ${COLORS.night};      
       background-color: #FFFFFF;
       font-family: Regular, sans-serif !important;        
       -webkit-font-smoothing: antialiased;
@@ -86,13 +86,13 @@ export const GlobalStyle = createGlobalStyle`
     }        
     
     a {
-      color: ${COLORS.blue};
+      color: ${COLORS.blueDark};
       cursor: pointer;
       text-decoration: none;
     }  
 
     p {
-     color: ${COLORS.grey};
+     color: ${COLORS.greyMouse};
      font-size: 1.125rem;
      margin: 0;
      padding: 0;

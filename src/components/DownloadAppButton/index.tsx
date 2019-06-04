@@ -7,7 +7,7 @@ import {
 
 interface IProps {
   url?: string;
-  dimension?: 'small' | 'medium' | 'large';
+  dimension?: 'small' | 'medium';
   isFullWidth?: boolean;
   children: any;
 }
