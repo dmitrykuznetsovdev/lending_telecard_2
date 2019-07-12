@@ -94,7 +94,7 @@ function StepFour() {
     <GridStep>
       <GridColDescription>
         <StepTitle>
-          3. Нажмите «Разрешить».
+          4. Нажмите «Разрешить».
         </StepTitle>
         <Description>
           Когда вы откроете его в первый
