@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "cp src/MAIN.tsx src/index.tsx && react-app-rewired start",
+    "build-ios": "cp src/IosIndex.tsx src/index.tsx && react-app-rewired build && rm -rf build-ios && mv build build-ios",
+    "build-android": "cp src/AndroidIndex.tsx src/index.tsx && react-app-rewired build && rm -rf build-android && mv build build-android",
+    "build": "npm run build-ios && npm run build-android && cp src/MAIN.tsx src/index.tsx",
     "test": "react-app-rewired test --env=jsdom",
     "lint:css": "./node_modules/stylelint/bin/stylelint.js './src/**/*.ts'",
     "tslint": "./node_modules/tslint/bin/tslint -p tsconfig.json './src/**/*.{d.ts,ts,tsx}'",
