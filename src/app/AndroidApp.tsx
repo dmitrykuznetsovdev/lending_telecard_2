@@ -9,7 +9,7 @@ import { withIsMobile, withIntl } from '../dal/commonDecorators';
 import { GlobalStyle } from '../assets/normalize';
 import { lazyInject } from '../dal/IoC';
 
-import { IosPageLazy, AndroidPageLazy } from './Routes';
+import { AndroidPageLazy } from './Routes';
 import { AppComponent, Content } from './style';
 
 interface IProps {
@@ -32,6 +32,11 @@ class Application extends Component<IProps, IState> {
     isOpenMobileMenu: false,
   };
 
+  constructor(props: IProps) {
+    super(props);
+    document.title = 'Telecard 2.0 android';
+  }
+
   render() {
     const { isMobile } = this.props;
     const { globalTheme } = this.ui;
@@ -42,9 +47,7 @@ class Application extends Component<IProps, IState> {
           <GlobalStyle theme={globalTheme} />
           <Content isMobile={isMobile}>
             <Switch>
-              <Route component={AndroidPageLazy} path="/android/" />
-              <Route component={IosPageLazy} path="/ios/" />
-              <Route component={IosPageLazy} path="/" exact={true} />
+              <Route component={AndroidPageLazy} path="/" exact={true} />
             </Switch>
           </Content>
         </AppComponent>

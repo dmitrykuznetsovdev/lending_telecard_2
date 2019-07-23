@@ -7,7 +7,7 @@ import { Router } from 'react-router';
 import { RouterStore } from 'mobx-react-router';
 
 import browserHistory from './app/history';
-import Application from './app/App';
+import Application from './app/IosApp';
 import * as serviceWorker from './serviceWorker';
 import { container } from './dal/IoC';
 import boot from './bootstrap';
