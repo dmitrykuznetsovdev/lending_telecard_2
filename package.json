@@ -23,7 +23,7 @@
     "lint:css"
   ],
   "dependencies": {
-    "@holism/core": "^1.1.21",
+    "@holism/core": "^1.1.22",
     "@holism/dotfiles": "0.0.11",
     "axios": "^0.19.0",
     "i18next": "^15.1.3",

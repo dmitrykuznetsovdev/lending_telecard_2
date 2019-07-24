@@ -11,6 +11,7 @@ import Application from './app/AndroidApp';
 import * as serviceWorker from './serviceWorker';
 import { container } from './dal/IoC';
 import boot from './bootstrap';
+import './assets/fonts';
 
 window['__localeData__'] = {};
 

@@ -19,8 +19,7 @@ export const HeaderStyle = styled.div<Partial<IProps>>`
 `;
 
 export const Title = styled.h1`
-  margin-top: 56px;
-  font-family: Roboto;
+  margin-top: 56px;  
   font-size: 48px;
   font-weight: bold;
   font-style: normal;

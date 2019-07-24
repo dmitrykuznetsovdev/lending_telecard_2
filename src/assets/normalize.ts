@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     html, body {
       height: 100%;
       box-sizing: border-box;
+      font-family: Regular, sans-serif !important;
       ${
         isMobile
           ? `

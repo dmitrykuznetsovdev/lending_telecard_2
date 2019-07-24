@@ -56,8 +56,7 @@ export const GridStep = styled(Grid)`
 `;
 
 export const ContentTitle = styled.h2`
-  margin-top: 80px;
-  font-family: Roboto;
+  margin-top: 80px;  
   font-size: 42px;
   font-weight: bold;
   font-style: normal;
@@ -86,8 +85,7 @@ export const Image = styled.img`
   }
 `;
 
-export const Description = styled.div`
-  font-family: Roboto;
+export const Description = styled.div`  
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
@@ -105,8 +103,7 @@ export const Description = styled.div`
 
 export const StepTitle = styled.h3`
   margin-bottom: 1em;
-  padding-top: 10px;
-  font-family: Roboto;
+  padding-top: 10px;  
   font-size: 32px;
   font-weight: bold;
   font-style: normal;
