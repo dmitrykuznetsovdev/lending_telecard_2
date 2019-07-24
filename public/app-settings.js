@@ -1,0 +1,5 @@
+window['SERVICES_URL'] = {
+  "LINK_APP_IOS_URL": "/IOS_URL123/",
+  "LINK_APP_ANDROID_URL": "/ANDROID_URL/"
+};
+

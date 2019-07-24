@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`  
+export const Wrapper = styled.div`
   width: 900px;
   height: 100%;
   margin: auto;
@@ -9,10 +9,10 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Content = styled.div`  
+export const Content = styled.div`
   margin-top: 40px;
-  border-left: solid 1px #E0E0E0;
-  
+  border-left: solid 1px #e0e0e0;
+
   @media all and (max-width: 910px) {
     border-left: none;
   }
@@ -23,24 +23,24 @@ export const Grid = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
-  
+
   @media all and (max-width: 910px) {
-    flex-direction: column;        
+    flex-direction: column;
   }
 `;
 
 export const GridCol = styled.div`
   display: block;
-  flex: 1;    
+  flex: 1;
   justify-content: space-around;
 `;
 
 export const GridColDescription = styled(GridCol)`
   min-width: 400px;
-  
+
   @media all and (max-width: 910px) {
     min-width: 100%;
-    width: 100%;        
+    width: 100%;
     padding-bottom: 20px;
   }
 `;
@@ -48,14 +48,14 @@ export const GridColDescription = styled(GridCol)`
 export const GridStep = styled(Grid)`
   min-height: 620px;
   padding-left: 26px;
-  margin-bottom: 40px; 
-  
+  margin-bottom: 40px;
+
   @media all and (max-width: 910px) {
-    padding-left: 0px;        
+    padding-left: 0px;
   }
 `;
 
-export const ContentTitle = styled.h2`  
+export const ContentTitle = styled.h2`
   margin-top: 80px;
   font-family: Roboto;
   font-size: 42px;
@@ -64,7 +64,7 @@ export const ContentTitle = styled.h2`
   font-stretch: normal;
   letter-spacing: normal;
   color: #303239;
-  
+
   @media all and (max-width: 910px) {
     margin-top: 40px;
     font-size: 28px;
@@ -86,7 +86,7 @@ export const Image = styled.img`
   }
 `;
 
-export const Description = styled.div`    
+export const Description = styled.div`
   font-family: Roboto;
   font-size: 18px;
   font-weight: normal;
@@ -94,8 +94,8 @@ export const Description = styled.div`
   font-stretch: normal;
   line-height: 1.56;
   letter-spacing: normal;
-  color: #000000;  
-  
+  color: #000000;
+
   @media all and (max-width: 910px) {
     padding-right: 20px;
     font-size: 15px;
@@ -103,7 +103,7 @@ export const Description = styled.div`
   }
 `;
 
-export const StepTitle = styled.h3`  
+export const StepTitle = styled.h3`
   margin-bottom: 1em;
   padding-top: 10px;
   font-family: Roboto;
@@ -114,9 +114,9 @@ export const StepTitle = styled.h3`
   line-height: 1.25;
   letter-spacing: normal;
   color: #303239;
-  
+
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     border-radius: 50%;
     left: -8px;
@@ -125,16 +125,14 @@ export const StepTitle = styled.h3`
     height: 16px;
     background-color: #195dbd;
   }
-  
+
   @media all and (max-width: 910px) {
     font-size: 24px;
     line-height: 1.33;
-    margin-top: 0;    
-      
+    margin-top: 0;
+
     &:before {
-        display: none;
+      display: none;
     }
   }
 `;
-
-

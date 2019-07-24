@@ -4,13 +4,9 @@ import AxiosConfig from '../conf/axios';
 
 import { IAPI } from './interfaces';
 
-const domains = {
+const domains = {};
 
-};
-
-const domainsMock = {
-
-};
+const domainsMock = {};
 
 /**
  *

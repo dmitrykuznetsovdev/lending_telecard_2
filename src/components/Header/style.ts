@@ -1,24 +1,25 @@
 import styled from 'styled-components';
 
-import bannerIos from "./ios/banner.png";
-import bannerAndroid from "./android/banner.png";
-import {IProps} from "./header";
+import bannerIos from './ios/banner.png';
+import bannerAndroid from './android/banner.png';
+import { IProps } from './header';
 
-export const HeaderStyle = styled.div<Partial<IProps>>`  
+export const HeaderStyle = styled.div<Partial<IProps>>`
   padding: 15px;
-  background-image: ${({system}) => (system === 'ios') ? `url(${bannerIos})` : `url(${bannerAndroid})`};
+  background-image: ${({ system }) =>
+    system === 'ios' ? `url(${bannerIos})` : `url(${bannerAndroid})`};
   background-repeat: no-repeat;
   background-position-x: center;
   height: 389px;
-  
+
   @media all and (max-width: 910px) {
     background-position: 85%;
-    background-size: cover;        
+    background-size: cover;
   }
 `;
 
-export const Title = styled.h1`  
-  margin-top: 56px;  
+export const Title = styled.h1`
+  margin-top: 56px;
   font-family: Roboto;
   font-size: 48px;
   font-weight: bold;
@@ -28,9 +29,9 @@ export const Title = styled.h1`
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  
+
   @media all and (max-width: 910px) {
     font-size: 32px;
-    margin-top: 119px;    
+    margin-top: 119px;
   }
 `;

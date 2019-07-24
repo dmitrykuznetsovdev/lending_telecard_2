@@ -6,10 +6,10 @@ export const AppComponent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;
-export const Content = styled.div<{isMobile: boolean;}>`  
+export const Content = styled.div<{ isMobile: boolean }>`
   margin: auto;
-  height: 100%;  
-  
+  height: 100%;
+
   @media all and (max-width: 910px) {
     min-width: 320px;
   }

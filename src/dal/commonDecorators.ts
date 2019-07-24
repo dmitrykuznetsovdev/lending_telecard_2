@@ -10,7 +10,6 @@ export const withIntl = (Component: IReactComponent<any>): IReactComponent<any> 
     locale: container.get(I18nStore).locale,
   }))(Component);
 
-
 export const withIsMobile = (Component: IReactComponent<any>): IReactComponent<any> =>
   inject(() => ({
     isMobile: container.get(UIStore).isMobile,

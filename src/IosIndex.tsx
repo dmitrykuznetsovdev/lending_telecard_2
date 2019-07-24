@@ -12,7 +12,6 @@ import * as serviceWorker from './serviceWorker';
 import { container } from './dal/IoC';
 import boot from './bootstrap';
 
-
 window['__localeData__'] = {};
 
 mobx.configure({ enforceActions: 'observed' });
@@ -29,7 +28,6 @@ function initApp() {
   );
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
   boot()
     .then(initApp)
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // tslint:disable-next-line
     .catch(e => console.warn(`%c ${e}`, 'background: #222; color: #bada55'));
 });
-
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

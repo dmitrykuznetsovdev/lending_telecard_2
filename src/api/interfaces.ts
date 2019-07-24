@@ -1,8 +1,6 @@
 import { AxiosRequestConfig } from 'axios';
 
-export interface IAPI {
-
-}
+export interface IAPI {}
 
 export type EndPoints<T> = { [P in keyof T]: string };
 
